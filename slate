@@ -1,0 +1,9 @@
+config secondsBetweenRepeat 0.1
+
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+config windowHintsDuration 5
+config windowHintsBackgroundColor 50;53;58;0.9
+
+bind esc:cmd hint
