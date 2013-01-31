@@ -8,7 +8,10 @@ defaults write com.apple.dock springboard-hide-duration -int 0
 # Disable auto-hiding dock delay.
 defaults write com.apple.Dock autohide-delay -float 0
 
-# Enable hidden four-finger gesture to go back to most recent space.
+# Enable Text Selection within QuickLook
+defaults write com.apple.finder QLEnableTextSelection -boolean YES
+
+# Enable hidden four-finger double-tap gesture to go back to most recent space.
 defaults write com.apple.dock double-tap-jump-back -bool TRUE
 
 # Make Dock icons of hidden applications translucent.
