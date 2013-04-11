@@ -30,9 +30,5 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-# Symlink KeyRemap4Macbook into Application Support folder
-echo "Creating symlink to KeyRemap4MacBook in Application Support directory."
-ln -s $dir/KeyRemap4MacBook ~/Library/Application\ Support/KeyRemap4MacBook
-
 # Run osx.sh
 sh $dir/osx.sh

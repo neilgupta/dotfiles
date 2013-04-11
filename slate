@@ -1,10 +1,5 @@
 config secondsBetweenRepeat 0.1
 
-config windowHintsShowIcons true
-config windowHintsIgnoreHiddenWindows false
-config windowHintsSpread true
-config windowHintsDuration 5
-
 alias hyper ctrl;shift;alt;cmd
 
 bind a:${hyper}		focus 'Safari'
@@ -12,6 +7,4 @@ bind s:${hyper}		focus 'Sublime Text 2'
 bind e:${hyper}		focus 'IntelliJ IDEA'
 bind w:${hyper}		focus 'Terminal'
 bind d:${hyper}		focus 'Titanium Studio'
-bind f:${hyper}		focus 'iOS Simulator'
 
-bind `:${hyper}	hint
