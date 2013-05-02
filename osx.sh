@@ -18,7 +18,10 @@ defaults write com.apple.dock double-tap-jump-back -bool TRUE
 defaults write com.apple.dock showhidden -bool true
 
 # Add a context menu item for showing the Web Inspector in web views.
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+#defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Copy just the email address in Mail, not name <name@email.com> format
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 killall Dock
 echo "...done. Some changes may require a restart to take effect."
