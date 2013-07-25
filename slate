@@ -7,4 +7,4 @@ bind s:${hyper}		focus 'Sublime Text 2'
 bind e:${hyper}		focus 'IntelliJ IDEA'
 bind w:${hyper}		focus 'Terminal'
 bind d:${hyper}		focus 'Titanium Studio'
-
+bind h:${hyper}		focus 'HipChat'
