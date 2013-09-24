@@ -3,3 +3,4 @@ Notes:
 You must manually copy KeyRemap4MacBook to Application Support folder, as sym link does not seem to work.
 Once installed, enable Esc key -> forward delete manually
 Set Timeout to 300ms
+In PCKeyboardHack, set the Caps Lock key to keycode 80 (for F19)
