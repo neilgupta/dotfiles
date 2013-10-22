@@ -1,12 +1,12 @@
 # Disable Expose animations.
-defaults write com.apple.dock expose-animation-duration -int 0
+# defaults write com.apple.dock expose-animation-duration -int 0
 
 # Disable Launchpad animations.
-defaults write com.apple.dock springboard-show-duration -int 0
-defaults write com.apple.dock springboard-hide-duration -int 0
+# defaults write com.apple.dock springboard-show-duration -int 0
+# defaults write com.apple.dock springboard-hide-duration -int 0
 
 # Disable auto-hiding dock delay.
-defaults write com.apple.Dock autohide-delay -float 0
+# defaults write com.apple.Dock autohide-delay -float 0
 
 # Enable Text Selection within QuickLook
 defaults write com.apple.finder QLEnableTextSelection -boolean YES
