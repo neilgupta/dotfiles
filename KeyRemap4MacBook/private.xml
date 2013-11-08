@@ -16,7 +16,8 @@
 	</item>
 	<item>
 	    <name>Shifts to Parentheses</name>
-	    <appendix>Shifts, when pressed alone, type parentheses.  When used with other keys they're normal shifts.</appendix>
+	    <appendix>Shifts, when pressed alone, type parentheses. When used with other keys they're normal shifts.</appendix>
+	    <not>FINDER, SAFARI, TERMINAL</not>
 
 	    <identifier>private.shifts_to_parens</identifier>
 
@@ -38,4 +39,152 @@
 	    -->
 	    <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::SHIFT_R, KeyCode::KEY_0, ModifierFlag::SHIFT_L, KeyCode::SPACE</autogen>
 	</item>
+
+	<!-- App definitions -->
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Sublime</name>
+    <url type="file">/Applications/Sublime Text.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_IntelliJ</name>
+    <url type="file">/Applications/IntelliJ IDEA 12 CE.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Titanium</name>
+    <url type="file">/Applications/Titanium Studio/TitaniumStudio.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Hipchat</name>
+    <url type="file">/Applications/HipChat.app</url>
+  </vkopenurldef>
+
+  <item>
+	    <name>Remap Hyper keys to launch my apps</name>
+	    <identifier>metamorphium.hyper</identifier>
+
+	    <autogen>
+	        --KeyToKey--
+	        KeyCode::A,
+	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+
+	        KeyCode::VK_OPEN_URL_APP_Safari
+	    </autogen>
+	    <autogen>
+	        --KeyToKey--
+	        KeyCode::S,
+	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+
+	        KeyCode::VK_OPEN_URL_APP_Sublime
+	    </autogen>
+	    <autogen>
+	        --KeyToKey--
+	        KeyCode::E,
+	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+
+	        KeyCode::VK_OPEN_URL_APP_IntelliJ
+	    </autogen>
+	    <autogen>
+	        --KeyToKey--
+	        KeyCode::W,
+	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+
+	        KeyCode::VK_OPEN_URL_APP_Terminal
+	    </autogen>
+	    <autogen>
+	        --KeyToKey--
+	        KeyCode::D,
+	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+
+	        KeyCode::VK_OPEN_URL_APP_Titanium
+	    </autogen>
+	    <autogen>
+	        --KeyToKey--
+	        KeyCode::H,
+	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+
+	        KeyCode::VK_OPEN_URL_APP_Hipchat
+	    </autogen>
+	    <autogen>
+	        --KeyToKey--
+	        KeyCode::QUOTE,
+	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+
+	        KeyCode::VK_OPEN_URL_APP_Finder
+	    </autogen>
+	</item>
+
+	<item>
+	    <name>Safari Navigation</name>
+			<appendix>Remap Shift keys to go back and forth in Safari.</appendix>
+	    <identifier>metamorphium.nav_safari</identifier>
+	    <only>SAFARI, TERMINAL</only>
+
+	    <!-- Go back and forth in history by tapping shift keys -->
+	    <autogen>__KeyOverlaidModifier__ KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::SHIFT_R, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_L</autogen>
+	    <autogen>__KeyOverlaidModifier__ KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::SHIFT_L, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_R</autogen>
+	</item>
+
+	<item>
+	    <name>Finder Navigation</name>
+			<appendix>Remap Shift keys to navigate directories in Finder.</appendix>
+	    <identifier>metamorphium.nav_finder</identifier>
+	    <only>FINDER</only>
+
+	    <!-- Go up and down in directory by tapping shift keys -->
+	    <autogen>__KeyOverlaidModifier__ KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::SHIFT_R, KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_R</autogen>
+	    <autogen>__KeyOverlaidModifier__ KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::SHIFT_L, KeyCode::CURSOR_UP, ModifierFlag::COMMAND_R</autogen>
+	</item>
+
+	<!-- shell commands -->
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_dock_left</name>
+    <url type="shell">
+      <![CDATA[    osascript ~/dotfiles/scripts/dock_left.scpt    ]]>
+    </url>
+  </vkopenurldef>
+  <!-- shell commands -->
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_dock_right</name>
+    <url type="shell">
+      <![CDATA[    osascript ~/dotfiles/scripts/dock_right.scpt    ]]>
+    </url>
+  </vkopenurldef>
+  <!-- shell commands -->
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_dock_top</name>
+    <url type="shell">
+      <![CDATA[    osascript ~/dotfiles/scripts/dock_top.scpt    ]]>
+    </url>
+  </vkopenurldef>
+
+	<item>
+	    <name>Resize windows</name>
+	    <appendix>Slate bindings to resize windows.</appendix>
+
+	    <identifier>metamorphium.window_resize</identifier>
+
+	    <autogen>
+	        --KeyToKey--
+	        KeyCode::CURSOR_LEFT,
+	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+
+	        KeyCode::VK_OPEN_URL_SHELL_dock_left
+	    </autogen>
+	    <autogen>
+	        --KeyToKey--
+	        KeyCode::CURSOR_RIGHT,
+	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+
+	        KeyCode::VK_OPEN_URL_SHELL_dock_right
+	    </autogen>
+	    <autogen>
+	        --KeyToKey--
+	        KeyCode::CURSOR_UP,
+	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+
+	        KeyCode::VK_OPEN_URL_SHELL_dock_top
+	    </autogen>
+	</item>
+
 </root>

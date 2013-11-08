@@ -8,7 +8,6 @@ brew install brew-cask
 # Apps
 brew cask install dropbox
 brew cask install google-chrome
-brew cask install slate
 brew cask install keyremap4macbook
 brew cask install pc-keyboardhack
 brew cask install splashtop-streamer

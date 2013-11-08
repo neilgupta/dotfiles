@@ -30,6 +30,8 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+cp -r $dir/KeyRemap4MacBook/ ~/Library/Application\ Support/KeyRemap4MacBook
+
 # Run osx.sh
 sh $dir/osx.sh
 sh $dir/apps.sh
