@@ -32,3 +32,6 @@ done
 
 # Run osx.sh
 sh $dir/osx.sh
+sh $dir/apps.sh
+
+echo "...done. Some changes require a restart to take effect."
