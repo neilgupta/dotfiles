@@ -140,21 +140,21 @@
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_SHELL_dock_left</name>
     <url type="shell">
-      <![CDATA[    osascript ~/dotfiles/scripts/dock_left.scpt    ]]>
+      <![CDATA[    osascript ~/dotfiles/scripts/dock_left.applescript    ]]>
     </url>
   </vkopenurldef>
   <!-- shell commands -->
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_SHELL_dock_right</name>
     <url type="shell">
-      <![CDATA[    osascript ~/dotfiles/scripts/dock_right.scpt    ]]>
+      <![CDATA[    osascript ~/dotfiles/scripts/dock_right.applescript    ]]>
     </url>
   </vkopenurldef>
   <!-- shell commands -->
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_SHELL_dock_top</name>
     <url type="shell">
-      <![CDATA[    osascript ~/dotfiles/scripts/dock_top.scpt    ]]>
+      <![CDATA[    osascript ~/dotfiles/scripts/dock_top.applescript    ]]>
     </url>
   </vkopenurldef>
 
