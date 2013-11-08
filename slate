@@ -2,14 +2,6 @@ config secondsBetweenRepeat 0.1
 
 alias hyper ctrl;shift;alt;cmd
 
-bind a:${hyper}     focus 'Safari'
-bind s:${hyper}     focus 'Sublime Text'
-bind e:${hyper}     focus 'IntelliJ IDEA'
-bind w:${hyper}     focus 'Terminal'
-bind d:${hyper}     focus 'Titanium Studio'
-bind h:${hyper}     focus 'HipChat'
-bind ':${hyper}     focus 'Finder'
-
 bind up:${hyper}    move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
 bind left:${hyper}  move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
 bind right:${hyper} move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY

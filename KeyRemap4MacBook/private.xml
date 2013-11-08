@@ -115,8 +115,8 @@
 	</item>
 
 	<item>
-	    <name>Safari Navigation</name>
-			<appendix>Remap Shift keys to go back and forth in Safari.</appendix>
+	    <name>Safari/Terminal Navigation</name>
+			<appendix>Remap Shift keys to go back and forth in Safari and Terminal.</appendix>
 	    <identifier>metamorphium.nav_safari</identifier>
 	    <only>SAFARI, TERMINAL</only>
 
@@ -134,57 +134,6 @@
 	    <!-- Go up and down in directory by tapping shift keys -->
 	    <autogen>__KeyOverlaidModifier__ KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::SHIFT_R, KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_R</autogen>
 	    <autogen>__KeyOverlaidModifier__ KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::SHIFT_L, KeyCode::CURSOR_UP, ModifierFlag::COMMAND_R</autogen>
-	</item>
-
-	<!-- shell commands -->
-  <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_SHELL_dock_left</name>
-    <url type="shell">
-      <![CDATA[    osascript ~/dotfiles/scripts/dock_left.applescript    ]]>
-    </url>
-  </vkopenurldef>
-  <!-- shell commands -->
-  <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_SHELL_dock_right</name>
-    <url type="shell">
-      <![CDATA[    osascript ~/dotfiles/scripts/dock_right.applescript    ]]>
-    </url>
-  </vkopenurldef>
-  <!-- shell commands -->
-  <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_SHELL_dock_top</name>
-    <url type="shell">
-      <![CDATA[    osascript ~/dotfiles/scripts/dock_top.applescript    ]]>
-    </url>
-  </vkopenurldef>
-
-	<item>
-	    <name>Resize windows</name>
-	    <appendix>Slate bindings to resize windows.</appendix>
-
-	    <identifier>metamorphium.window_resize</identifier>
-
-	    <autogen>
-	        --KeyToKey--
-	        KeyCode::CURSOR_LEFT,
-	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
-
-	        KeyCode::VK_OPEN_URL_SHELL_dock_left
-	    </autogen>
-	    <autogen>
-	        --KeyToKey--
-	        KeyCode::CURSOR_RIGHT,
-	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
-
-	        KeyCode::VK_OPEN_URL_SHELL_dock_right
-	    </autogen>
-	    <autogen>
-	        --KeyToKey--
-	        KeyCode::CURSOR_UP,
-	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
-
-	        KeyCode::VK_OPEN_URL_SHELL_dock_top
-	    </autogen>
 	</item>
 
 </root>
