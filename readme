@@ -1,8 +1,1 @@
-Notes:
-
-In KeyRemap4MacBook:
-
-Once installed, enable Esc key -> forward delete manually
-Set Timeout to 300ms
-
-In PCKeyboardHack: set the Caps Lock key to keycode 80 (for F19)
+Be sure to clone this repo in your home directory, then run `sh ~/dotfiles/install.sh`

@@ -1,6 +1,6 @@
 #!/bin/bash
 ############################
-# .make.sh
+# install.sh
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
 
@@ -8,32 +8,45 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="gitconfig bash_profile slate gemrc"    # list of files/folders to symlink in homedir
+files="gitconfig bash_profile slate gemrc m2/settings.xml"    # list of files/folders to symlink in homedir
 
 ##########
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
-echo "...done"
+
+# create ~/.m2 directory
+echo "Creating .m2 for Maven in ~"
+mkdir -p ~/.m2
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
 cd $dir
-echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
+    mv ~/.$file $olddir/
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
 
-cp -r $dir/KeyRemap4MacBook/ ~/Library/Application\ Support/KeyRemap4MacBook
+# symlink keyremap4macbook settings to Application Support
+echo "Creating symlink to private.xml in ~/Library/Application Support/KeyRemap4MacBook directory."
+mkdir -p ~/Library/Application\ Support/KeyRemap4MacBook
+ln -s $dir/KeyRemap4MacBook/private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
 
-# Run osx.sh
+echo "Copying fonts to Library"
+cp -r $dir/Fonts ~/Library/Fonts
+
+# Run shell scripts
+echo "Running osx config..."
 sh $dir/osx.sh
+echo "Installing apps..."
 sh $dir/apps.sh
 
-echo "...done. Some changes require a restart to take effect."
+echo "...done"
+printf "\nIn KeyRemap4MacBook:\n  * Enable mappings, including Esc key -> forward delete manually\n  * Set Timeout to 300ms\n"
+printf "\nIn PCKeyboardHack:\n  * Set the Caps Lock key to keycode 80 (for F19)\n"
+printf "\nPlease restart your machine.\n\n"
