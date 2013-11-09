@@ -116,7 +116,7 @@
 
 	<item>
 	    <name>Safari/Terminal Navigation</name>
-			<appendix>Remap Shift keys to go back and forth in Safari and Terminal.</appendix>
+			<appendix>Remap Shift keys to switch tabs in Safari and Terminal.</appendix>
 	    <identifier>metamorphium.nav_safari</identifier>
 	    <only>SAFARI, TERMINAL</only>
 
