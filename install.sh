@@ -40,6 +40,9 @@ ln -s $dir/KeyRemap4MacBook/private.xml ~/Library/Application\ Support/KeyRemap4
 echo "Copying fonts to Library"
 cp -r $dir/Fonts ~/Library/Fonts
 
+echo "Creating QuickLook dir"
+mkdir -p ~/Library/QuickLook
+
 # Run shell scripts
 echo "Running osx config..."
 sh $dir/osx.sh

@@ -1,6 +1,9 @@
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
+# wget
+brew install wget
+
 # Homebrew Cask
 brew tap phinze/homebrew-cask
 brew install brew-cask
@@ -28,3 +31,7 @@ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 
 # RVM
 # Install rvm, ruby 1.9.3, bundler
+# gem install bundler
+
+# QLStephen
+./grget -d ~/Library/QuickLook -u whomwah/qlstephen

@@ -1,0 +1,72 @@
+#!/bin/bash
+
+usage="
+usage: $(basename "$0") [-h] [-d directory] [-u] username/project     Download the latest release binary of a GitHub project
+
+where:
+    -d  set the directory where the download should be saved
+    -u  unzip any .zip files that are downloaded
+    -h  show this help text
+
+example: $(basename "$0") -d ~/Desktop tabule/sherlock
+"
+
+command -v wget >/dev/null 2>&1 || { echo >&2 "I require wget but it's not installed. Aborting."; exit 1; }
+
+do_unzip=false dest= 
+while getopts :hud: opt; do
+  case $opt in
+  h)
+      echo "$usage"
+      exit
+      ;;
+  d)
+      dest=$OPTARG
+      ;;
+  u)
+      do_unzip=true
+      ;;
+  \?)
+      echo "Invalid option: -$OPTARG" >&2
+      echo "$usage" >&2
+      exit 1
+      ;;
+  :)
+      echo "Option -$OPTARG requires an argument." >&2
+      echo "$usage" >&2
+      exit 1
+      ;;
+  esac
+done
+shift $((OPTIND - 1))
+
+user=$1
+if [[ -z "$user" ]] ; then
+  echo "Missing GitHub repo name" >&2
+  echo "$usage" >&2
+  exit 1
+fi
+
+folder=${user//\//_}
+mkdir $folder
+cd $folder
+
+echo "Downloading latest release from $user"
+wget -q -r -nd -l 1 --include /$user/releases --adjust-extension -R html --ignore-case -e robots=off https://github.com/$user/releases/latest
+
+if $do_unzip ; then
+  echo "Unzipping downloads"
+  zip=*.zip
+  unzip -q $zip
+  rm $zip
+fi
+
+if [[ ! -z "$dest" ]] ; then
+  echo "Placing downloads in $dest"
+  mv ./* $dest
+  cd ..
+  rm -rf $folder
+else
+  echo "Placing downloads in $folder"
+  cd ..
+fi
