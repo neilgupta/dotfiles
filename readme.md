@@ -11,7 +11,6 @@ Additional things to install:
 * Install `SublimeGit` via Package Control
 * Install `GitGutter` via Package Control
 * Install `Theme - Flatland` via Package Control
-* Install `SublimeREPL` via Package Control
 * Copy `Preferences.sublime-settings` to Sublime's User settings file
 
 See more details at http://blog.metamorphium.com/2012/10/07/the-little-things-developer/
