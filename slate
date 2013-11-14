@@ -5,3 +5,7 @@ alias hyper ctrl;shift;alt;cmd
 bind up:${hyper}    move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
 bind left:${hyper}  move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
 bind right:${hyper} move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
+
+bind 1:${hyper} throw 0
+bind 2:${hyper} throw 1
+bind 3:${hyper} throw 2
