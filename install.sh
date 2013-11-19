@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="gitconfig bash_profile slate gemrc m2/settings.xml"    # list of files/folders to symlink in homedir
+files="gitconfig bash_profile inputrc slate gemrc m2/settings.xml"    # list of files/folders to symlink in homedir
 
 ##########
 
