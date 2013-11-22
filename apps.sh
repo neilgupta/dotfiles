@@ -22,6 +22,9 @@ brew cask install intellij-community
 brew cask install hipchat
 brew cask install sourcetree
 
+# Maven
+brew install maven
+
 # MySQL
 brew install mysql
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
