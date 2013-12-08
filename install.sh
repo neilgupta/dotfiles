@@ -26,16 +26,21 @@ cd $dir
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file $olddir/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+  echo "Moving any existing dotfiles from ~ to $olddir"
+  mv ~/.$file $olddir/
+  echo "Creating symlink to $file in home directory."
+  ln -s $dir/$file ~/.$file
 done
 
 # symlink keyremap4macbook settings to Application Support
 echo "Creating symlink to private.xml in ~/Library/Application Support/KeyRemap4MacBook directory."
 mkdir -p ~/Library/Application\ Support/KeyRemap4MacBook
 ln -s $dir/KeyRemap4MacBook/private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
+
+for entry in "$dir/Preferences"/*; do
+  echo "Creating symlink to ${entry##*/} ~/Library/Preferences directory."
+  ln -s $entry ~/Library/Preferences/${entry##*/}
+done
 
 echo "Copying fonts to Library"
 cp -r $dir/Fonts ~/Library/Fonts
