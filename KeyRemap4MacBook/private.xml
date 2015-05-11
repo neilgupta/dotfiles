@@ -47,16 +47,8 @@
     <url type="file">/Applications/Sublime Text.app</url>
   </vkopenurldef>
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_IntelliJ</name>
-    <url type="file">/Applications/IntelliJ IDEA 13 CE.app</url>
-  </vkopenurldef>
-  <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Titanium</name>
-    <url type="file">/Applications/Titanium Studio/TitaniumStudio.app</url>
-  </vkopenurldef>
-  <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Hipchat</name>
-    <url type="file">/Applications/HipChat.app</url>
+    <name>KeyCode::VK_OPEN_URL_APP_Slack</name>
+    <url type="file">/Applications/Slack.app</url>
   </vkopenurldef>
 
   <item>
@@ -79,13 +71,6 @@
 	    </autogen>
 	    <autogen>
 	        --KeyToKey--
-	        KeyCode::E,
-	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
-
-	        KeyCode::VK_OPEN_URL_APP_IntelliJ
-	    </autogen>
-	    <autogen>
-	        --KeyToKey--
 	        KeyCode::W,
 	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
 
@@ -93,17 +78,10 @@
 	    </autogen>
 	    <autogen>
 	        --KeyToKey--
-	        KeyCode::D,
-	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
-
-	        KeyCode::VK_OPEN_URL_APP_Titanium
-	    </autogen>
-	    <autogen>
-	        --KeyToKey--
 	        KeyCode::H,
 	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
 
-	        KeyCode::VK_OPEN_URL_APP_Hipchat
+	        KeyCode::VK_OPEN_URL_APP_Slack
 	    </autogen>
 	    <autogen>
 	        --KeyToKey--
