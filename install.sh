@@ -45,14 +45,14 @@ done
 echo "Copying fonts to Library"
 cp -r $dir/Fonts ~/Library/Fonts
 
-echo "Creating QuickLook dir"
-mkdir -p ~/Library/QuickLook
+# echo "Creating QuickLook dir"
+# mkdir -p ~/Library/QuickLook
 
 # Run shell scripts
 echo "Running osx config..."
 sh $dir/osx.sh
-echo "Installing apps..."
-sh $dir/apps.sh
+# echo "Installing apps..."
+# sh $dir/apps.sh
 
 echo "...done"
 printf "\nIn KeyRemap4MacBook:\n  * Enable mappings, including Esc key -> forward delete manually\n  * Set Timeout to 300ms\n"

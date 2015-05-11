@@ -4,7 +4,7 @@
 [core]
 	editor = nano
 	ignorecase = false
-	excludesfile = /Users/neil/.gitignore_global
+	excludesfile = /Users/neil/dotfiles/gitignore
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	st = status -sb
