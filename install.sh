@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="gitconfig bash_profile inputrc slate gemrc m2/settings.xml"    # list of files/folders to symlink in homedir
+files="gitconfig bash_profile inputrc slate gemrc karabiner.d/configuration/karabiner.json"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -17,8 +17,8 @@ echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
 
 # create ~/.m2 directory
-echo "Creating .m2 for Maven in ~"
-mkdir -p ~/.m2
+echo "Creating .karabiner.jd/configuration for Karabiner in ~"
+mkdir -p ~/.karabiner.d/configuration
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
@@ -33,14 +33,14 @@ for file in $files; do
 done
 
 # symlink keyremap4macbook settings to Application Support
-echo "Creating symlink to private.xml in ~/Library/Application Support/KeyRemap4MacBook directory."
-mkdir -p ~/Library/Application\ Support/KeyRemap4MacBook
-ln -s $dir/KeyRemap4MacBook/private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
+# echo "Creating symlink to private.xml in ~/Library/Application Support/KeyRemap4MacBook directory."
+# mkdir -p ~/Library/Application\ Support/KeyRemap4MacBook
+# ln -s $dir/KeyRemap4MacBook/private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
 
-for entry in "$dir/Preferences"/*; do
-  echo "Creating symlink to ${entry##*/} ~/Library/Preferences directory."
-  ln -s $entry ~/Library/Preferences/${entry##*/}
-done
+# for entry in "$dir/Preferences"/*; do
+#   echo "Creating symlink to ${entry##*/} ~/Library/Preferences directory."
+#   ln -s $entry ~/Library/Preferences/${entry##*/}
+# done
 
 echo "Copying fonts to Library"
 cp -r $dir/Fonts ~/Library/Fonts
@@ -55,6 +55,6 @@ sh $dir/osx.sh
 # sh $dir/apps.sh
 
 echo "...done"
-printf "\nIn KeyRemap4MacBook:\n  * Enable mappings, including Esc key -> forward delete manually\n  * Set Timeout to 300ms\n"
-printf "\nIn PCKeyboardHack:\n  * Set the Caps Lock key to keycode 80 (for F19)\n"
+# printf "\nIn KeyRemap4MacBook:\n  * Enable mappings, including Esc key -> forward delete manually\n  * Set Timeout to 300ms\n"
+# printf "\nIn PCKeyboardHack:\n  * Set the Caps Lock key to keycode 80 (for F19)\n"
 printf "\nPlease restart your machine.\n\n"
