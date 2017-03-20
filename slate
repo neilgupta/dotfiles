@@ -1,7 +1,6 @@
 config secondsBetweenRepeat 0.1
 
-#alias hyper ctrl;shift;alt;cmd
-alias hyper f19
+alias hyper ctrl;shift;alt;cmd
 
 bind up:${hyper}    move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
 bind left:${hyper}  move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
