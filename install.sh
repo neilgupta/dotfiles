@@ -35,14 +35,5 @@ done
 echo "Copying fonts to Library"
 cp -r $dir/Fonts ~/Library/Fonts
 
-# echo "Creating QuickLook dir"
-# mkdir -p ~/Library/QuickLook
-
-# Run shell scripts
-echo "Running osx config..."
-sh $dir/osx.sh
-
 echo "...done"
-# printf "\nIn KeyRemap4MacBook:\n  * Enable mappings, including Esc key -> forward delete manually\n  * Set Timeout to 300ms\n"
-# printf "\nIn PCKeyboardHack:\n  * Set the Caps Lock key to keycode 80 (for F19)\n"
 printf "\nPlease restart your machine.\n\n"
