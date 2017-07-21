@@ -21,13 +21,13 @@ hs.window.animationDuration = 0
 -- throw current window to previous screen
 hs.hotkey.bind(hyper, '1', function()
   local win = hs.window.focusedWindow()
-  win:moveToScreen(hs.screen.mainScreen():previous())
+  win:moveOneScreenEast()
 end)
 
 -- throw current window to next screen
 hs.hotkey.bind(hyper, '2', function()
   local win = hs.window.focusedWindow()
-  win:moveToScreen(hs.screen.mainScreen():next())
+  win:moveOneScreenWest()
 end)
 
 -- dock window to left half of screen
