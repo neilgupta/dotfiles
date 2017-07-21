@@ -1,6 +1,5 @@
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl .'
 alias todolist='grep -r "TODO " .'
-alias lock='open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
 
 alias dc='docker-compose'
 alias dcu='docker-compose up'
@@ -16,3 +15,5 @@ export DOCKER_TLS_VERIFY=1
 export DOCKER_MACHINE_NAME=dinghy
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH

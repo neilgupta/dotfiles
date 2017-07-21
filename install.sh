@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="gitconfig bash_profile inputrc slate gemrc karabiner.d/configuration/karabiner.json"    # list of files/folders to symlink in homedir
+files="gitconfig bash_profile inputrc slate gemrc hammerspoon/init.lua"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -17,8 +17,8 @@ echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
 
 # create ~/.m2 directory
-echo "Creating .karabiner.jd/configuration for Karabiner in ~"
-mkdir -p ~/.karabiner.d/configuration
+echo "Creating .hammerspoon for Hammerspoon in ~"
+mkdir -p ~/.hammerspoon
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
@@ -31,16 +31,6 @@ for file in $files; do
   echo "Creating symlink to $file in home directory."
   ln -s $dir/$file ~/.$file
 done
-
-# symlink keyremap4macbook settings to Application Support
-# echo "Creating symlink to private.xml in ~/Library/Application Support/KeyRemap4MacBook directory."
-# mkdir -p ~/Library/Application\ Support/KeyRemap4MacBook
-# ln -s $dir/KeyRemap4MacBook/private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
-
-# for entry in "$dir/Preferences"/*; do
-#   echo "Creating symlink to ${entry##*/} ~/Library/Preferences directory."
-#   ln -s $entry ~/Library/Preferences/${entry##*/}
-# done
 
 echo "Copying fonts to Library"
 cp -r $dir/Fonts ~/Library/Fonts
