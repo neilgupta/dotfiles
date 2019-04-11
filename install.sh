@@ -8,7 +8,9 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="gitconfig bash_profile inputrc slate gemrc hammerspoon/init.lua"    # list of files/folders to symlink in homedir
+
+# list of files/folders to symlink in homedir
+files="gitconfig bash_profile inputrc slate gemrc hammerspoon/init.lua config/karabiner/karabiner.json"
 
 ##########
 
@@ -16,9 +18,13 @@ files="gitconfig bash_profile inputrc slate gemrc hammerspoon/init.lua"    # lis
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
 
-# create ~/.m2 directory
+# create ~/.hammerspoon directory
 echo "Creating .hammerspoon for Hammerspoon in ~"
 mkdir -p ~/.hammerspoon
+
+# create ~/.config/karabiner directory
+echo "Creating .config/karabiner for Karabiner in ~"
+mkdir -p ~/.config/karabiner
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
