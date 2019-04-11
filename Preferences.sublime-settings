@@ -1,11 +1,5 @@
 {
-  "color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
   "font_face": "Inconsolata-g",
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
   "tab_size": 2,
-  "theme": "Flatland Dark.sublime-theme",
   "translate_tabs_to_spaces": true
 }
