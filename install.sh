@@ -10,7 +10,7 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 
 # list of files/folders to symlink in homedir
-files="gitconfig bash_profile inputrc slate gemrc hammerspoon/init.lua config/karabiner/karabiner.json"
+files="gitconfig zshrc gemrc hammerspoon/init.lua config/karabiner/karabiner.json"
 
 ##########
 
