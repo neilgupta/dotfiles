@@ -4,9 +4,11 @@ hyper = {"cmd", "alt", "ctrl", "shift"}
 -- app hotkeys
 singleapps = {
   {'A', 'Safari'},
+  {'Z', 'Google Chrome'},
   {'S', 'Sublime Text'},
   {'W', 'Terminal'},
   {'H', 'Slack'},
+  {'G', 'Guilded-Tarobi'},
   {'J', 'Messages'},
   {'V', 'Calendar'}
 }
