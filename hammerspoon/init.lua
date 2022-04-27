@@ -7,10 +7,12 @@ singleapps = {
   {'Z', 'Google Chrome'},
   {'S', 'Sublime Text'},
   {'W', 'Terminal'},
-  {'H', 'Slack'},
   {'G', 'Guilded-Tarobi'},
   {'J', 'Messages'},
-  {'V', 'Calendar'}
+  {'V', 'Calendar'},
+  {'E', 'Things3'},
+  {'M', 'Mail'},
+  {'N', 'Music'},
 }
 
 for i, app in ipairs(singleapps) do
@@ -20,16 +22,22 @@ end
 -- looks pretty but gets jittery when right aligning
 hs.window.animationDuration = 0
 
--- throw current window to previous screen
+-- throw current window to LG
 hs.hotkey.bind(hyper, '1', function()
   local win = hs.window.focusedWindow()
-  win:moveOneScreenWest()
+  win:moveToScreen('LG')
 end)
 
--- throw current window to next screen
+-- throw current window to laptop screen
 hs.hotkey.bind(hyper, '2', function()
   local win = hs.window.focusedWindow()
-  win:moveOneScreenEast()
+  win:moveToScreen('Built%-in')
+end)
+
+-- throw current window to Dell
+hs.hotkey.bind(hyper, '3', function()
+  local win = hs.window.focusedWindow()
+  win:moveToScreen('Dell')
 end)
 
 -- dock window to left half of screen
@@ -60,17 +68,38 @@ hs.hotkey.bind(hyper, "Right", function()
   win:setFrame(f)
 end)
 
--- maximize window
-hs.hotkey.bind(hyper, "Up", function()
+-- dock window to bottom half of screen
+hs.hotkey.bind(hyper, "Down", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
 
   f.x = max.x
-  f.y = max.y
+  f.y = max.y + (max.h / 2)
   f.w = max.w
-  f.h = max.h
+  f.h = max.h / 2
+  win:setFrame(f)
+end)
+
+-- maximize window or dock with top half if already maximized
+hs.hotkey.bind(hyper, "Up", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  if f.x == max.x and f.y == max.y and f.w == max.w and f.h == max.h then
+    f.x = max.x
+    f.y = max.y
+    f.w = max.w
+    f.h = max.h / 2
+  else
+    f.x = max.x
+    f.y = max.y
+    f.w = max.w
+    f.h = max.h
+  end
   win:setFrame(f)
 end)
 
@@ -80,13 +109,14 @@ mouseCircleTimer = nil
 hs.hotkey.bind(hyper, "D", function()
   -- Delete an existing highlight if it exists
   if mouseCircle then
-      mouseCircle:delete()
       if mouseCircleTimer then
           mouseCircleTimer:stop()
       end
+      mouseCircle:delete()
+      mouseCircle = nil
   end
   -- Get the current co-ordinates of the mouse pointer
-  mousepoint = hs.mouse.getAbsolutePosition()
+  mousepoint = hs.mouse.absolutePosition()
   -- Prepare a big red circle around the mouse pointer
   mouseCircle = hs.drawing.circle(hs.geometry.rect(mousepoint.x-40, mousepoint.y-40, 80, 80))
   mouseCircle:setStrokeColor({["red"]=1,["blue"]=0,["green"]=0,["alpha"]=1})
@@ -95,5 +125,8 @@ hs.hotkey.bind(hyper, "D", function()
   mouseCircle:show()
 
   -- Set a timer to delete the circle after 1 second
-  mouseCircleTimer = hs.timer.doAfter(1, function() mouseCircle:delete() end)
+  mouseCircleTimer = hs.timer.doAfter(1, function()
+    mouseCircle:delete()
+    mouseCircle = nil
+  end)
 end)
