@@ -13,6 +13,7 @@ singleapps = {
   {'E', 'Things3'},
   {'M', 'Mail'},
   {'N', 'Music'},
+  {'R', 'Obsidian'},
 }
 
 for i, app in ipairs(singleapps) do
