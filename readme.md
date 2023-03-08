@@ -2,17 +2,9 @@ Be sure to clone this repo to your home directory, then run
 
   sh ~/dotfiles/install.sh
 
-Additional things to install:
+** Additional things to install **
 
-** Karabiner Elements and Hammerspoon**
-
-* [Install Karabiner Elements](https://pqrs.org/osx/karabiner/)
-* [Instal Hammerspoon](https://www.hammerspoon.org)
-
-** Sublime Text **
-
-* [Install Sublime Text](http://www.sublimetext.com)
-* [Install Package Control](https://sublime.wbond.net/installation)
+* [Install Package Control](https://sublime.wbond.net/installation) in Sublime Text
 * Install `SublimeGit` via Package Control
 * Copy `Preferences.sublime-settings` to Sublime's User settings file
 

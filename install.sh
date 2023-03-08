@@ -41,5 +41,16 @@ done
 echo "Copying fonts to Library"
 cp -r $dir/Fonts ~/Library/Fonts
 
+echo "Installing brew..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+echo "Installing apps..."
+
+brew install --cask hammerspoon
+brew install --cask karabiner-elements
+brew install --cask sublime-text
+brew install --cask warp
+brew install --cask obsidian
+
 echo "...done"
-printf "\nPlease restart your machine.\n\n"
+printf "\nPlease quit Terminal or switch to Warp\n\n"

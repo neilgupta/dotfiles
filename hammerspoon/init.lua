@@ -3,17 +3,25 @@ hyper = {"cmd", "alt", "ctrl", "shift"}
 
 -- app hotkeys
 singleapps = {
-  {'A', 'Safari'},
-  {'Z', 'Google Chrome'},
-  {'S', 'Sublime Text'},
-  {'W', 'Terminal'},
-  {'G', 'Guilded-Tarobi'},
-  {'J', 'Messages'},
-  {'V', 'Calendar'},
+  -- top row
+  {'W', 'Warp'},
   {'E', 'Things3'},
-  {'M', 'Mail'},
-  {'N', 'Music'},
   {'R', 'Obsidian'},
+  -- middle row
+  {'A', 'Safari'},
+  {'S', 'Sublime Text'},
+  {'D', 'Guilded-Tarobi'},
+  -- F is finding cursor (see below)
+  {'G', 'Guilded'},
+  {'J', 'Messages'},
+  {'L', 'Music'},
+  -- bottom row
+  {'Z', 'Google Chrome'},
+  {'X', '1Password'},
+  -- C is Copy 'Em (defined in app)
+  {'V', 'Calendar'},
+  {'B', 'Step Two'},
+  {'M', 'Mail'},
 }
 
 for i, app in ipairs(singleapps) do
@@ -107,7 +115,7 @@ end)
 -- place a red circle around the mouse position
 mouseCircle = nil
 mouseCircleTimer = nil
-hs.hotkey.bind(hyper, "D", function()
+hs.hotkey.bind(hyper, "F", function()
   -- Delete an existing highlight if it exists
   if mouseCircle then
       if mouseCircleTimer then
@@ -126,7 +134,7 @@ hs.hotkey.bind(hyper, "D", function()
   mouseCircle:show()
 
   -- Set a timer to delete the circle after 1 second
-  mouseCircleTimer = hs.timer.doAfter(1, function()
+  mouseCircleTimer = hs.timer.doAfter(3, function()
     mouseCircle:delete()
     mouseCircle = nil
   end)
