@@ -51,6 +51,7 @@ brew install --cask karabiner-elements
 brew install --cask sublime-text
 brew install --cask warp
 brew install --cask obsidian
+brew install gh
 
 echo "...done"
 printf "\nPlease quit Terminal or switch to Warp\n\n"
