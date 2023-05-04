@@ -44,6 +44,9 @@ cp -r $dir/Fonts ~/Library/Fonts
 echo "Installing brew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/neil/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 echo "Installing apps..."
 
 brew install --cask hammerspoon
