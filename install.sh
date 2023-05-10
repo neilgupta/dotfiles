@@ -49,12 +49,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "Installing apps..."
 
-brew install --cask hammerspoon
-brew install --cask karabiner-elements
-brew install --cask sublime-text
-brew install --cask warp
-brew install --cask obsidian
-brew install gh
+brew bundle --file="~/dotfiles/Brewfile"
 
 echo "...done"
 printf "\nPlease quit Terminal or switch to Warp\n\n"
