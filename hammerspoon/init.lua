@@ -6,13 +6,15 @@ singleapps = {
   -- top row
   {'W', 'Warp'},
   {'E', 'Things3'},
-  {'R', 'Obsidian'},
+  {'R', 'Bear'},
+  -- T is finding cursor (see below)
   -- middle row
   {'A', 'Safari'},
   {'S', 'Sublime Text'},
   {'D', 'Guilded-Tarobi'},
-  -- F is finding cursor (see below)
+  -- F is a new Bear note
   {'G', 'Guilded'},
+  {'H', 'Slack'},
   {'J', 'Messages'},
   {'L', 'Music'},
   -- bottom row
@@ -115,7 +117,7 @@ end)
 -- place a red circle around the mouse position
 mouseCircle = nil
 mouseCircleTimer = nil
-hs.hotkey.bind(hyper, "F", function()
+hs.hotkey.bind(hyper, "T", function()
   -- Delete an existing highlight if it exists
   if mouseCircle then
       if mouseCircleTimer then
