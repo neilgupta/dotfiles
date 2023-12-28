@@ -6,13 +6,12 @@ singleapps = {
   -- top row
   {'W', 'Warp'},
   {'E', 'Things3'},
-  {'R', 'Bear'},
+  {'R', 'Obsidian'},
   -- T is finding cursor (see below)
   -- middle row
   {'A', 'Safari'},
   {'S', 'Sublime Text'},
   {'D', 'Guilded-Tarobi'},
-  -- F is a new Bear note
   {'G', 'Guilded'},
   {'H', 'Slack'},
   {'J', 'Messages'},
