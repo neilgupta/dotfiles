@@ -15,10 +15,10 @@ singleapps = {
   {'G', 'Guilded'},
   {'H', 'Slack'},
   {'J', 'Messages'},
+  -- K is CardHop (defined in app)
   {'L', 'Music'},
   -- bottom row
   {'Z', 'Google Chrome'},
-  {'X', '1Password'},
   -- C is Copy 'Em (defined in app)
   -- V is Fantastical (defined in app)
   {'B', 'Step Two'},
