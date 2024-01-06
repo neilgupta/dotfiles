@@ -20,7 +20,7 @@ singleapps = {
   {'Z', 'Google Chrome'},
   {'X', '1Password'},
   -- C is Copy 'Em (defined in app)
-  {'V', 'Calendar'},
+  -- V is Fantastical (defined in app)
   {'B', 'Step Two'},
   {'M', 'Mail'},
 }
