@@ -7,22 +7,22 @@ singleapps = {
   {'W', 'Warp'},
   {'E', 'Things3'},
   {'R', 'Obsidian'},
-  -- T is finding cursor (see below)
+  -- T is quick save in Anybox
   -- middle row
   {'A', 'Safari'},
   {'S', 'Sublime Text'},
   {'D', 'Guilded-Tarobi'},
-  {'G', 'Guilded'},
+  {'F', 'LM Studio'},
   {'H', 'Slack'},
   {'J', 'Messages'},
-  -- K is CardHop (defined in app)
+  -- K is Cardhop (defined in app)
   {'L', 'Music'},
   -- bottom row
   {'Z', 'Google Chrome'},
   -- C is Copy 'Em (defined in app)
   -- V is Fantastical (defined in app)
-  {'B', 'Step Two'},
   {'M', 'Mail'},
+  -- Space is quick find Anybox
 }
 
 for i, app in ipairs(singleapps) do
@@ -116,7 +116,7 @@ end)
 -- place a red circle around the mouse position
 mouseCircle = nil
 mouseCircleTimer = nil
-hs.hotkey.bind(hyper, "T", function()
+hs.hotkey.bind(hyper, "`", function()
   -- Delete an existing highlight if it exists
   if mouseCircle then
       if mouseCircleTimer then
