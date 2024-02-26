@@ -10,7 +10,7 @@ singleapps = {
   -- T is quick save in Anybox
   -- middle row
   {'A', 'Safari'},
-  {'S', 'Sublime Text'},
+  {'S', 'Visual Studio Code'},
   {'D', 'Guilded-Tarobi'},
   {'F', 'LM Studio'},
   {'H', 'Slack'},
