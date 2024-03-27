@@ -4,7 +4,6 @@ hyper = {"cmd", "alt", "ctrl", "shift"}
 -- app hotkeys
 singleapps = {
   -- top row
-  {'W', 'Warp'},
   {'E', 'Things3'},
   {'R', 'Obsidian'},
   -- T is quick save in Anybox
