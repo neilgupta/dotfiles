@@ -4,14 +4,16 @@ hyper = {"cmd", "alt", "ctrl", "shift"}
 -- app hotkeys
 singleapps = {
   -- top row
+  {'W', 'Warp'},
   {'E', 'Things3'},
   {'R', 'Obsidian'},
   -- T is quick save in Anybox
   -- middle row
   {'A', 'Safari'},
   {'S', 'Visual Studio Code'},
-  {'D', 'Guilded-Tarobi'},
-  {'F', 'LM Studio'},
+  {'D', 'Xcode 26'},
+  {'F', 'Simulator'},
+  {'G', 'Sublime Merge'},
   {'H', 'Slack'},
   {'J', 'Messages'},
   -- K is Cardhop (defined in app)
