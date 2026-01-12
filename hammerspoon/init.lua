@@ -11,7 +11,7 @@ singleapps = {
   -- middle row
   {'A', 'Safari'},
   {'S', 'Visual Studio Code'},
-  {'D', 'Xcode 26'},
+  {'D', 'Xcode'},
   {'F', 'Simulator'},
   {'G', 'Sublime Merge'},
   {'H', 'Slack'},
