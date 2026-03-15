@@ -6,6 +6,7 @@ singleapps = {
   -- top row
   {'W', 'Warp'},
   {'E', 'Things3'},
+  {'R', 'Notes'},
   -- T is quick save in Anybox
   -- P is quick find Anybox
 
