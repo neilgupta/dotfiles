@@ -6,24 +6,24 @@ singleapps = {
   -- top row
   {'W', 'Warp'},
   {'E', 'Things3'},
-  {'R', 'Obsidian'},
   -- T is quick save in Anybox
+  -- P is quick find Anybox
+
   -- middle row
   {'A', 'Safari'},
-  {'S', 'Visual Studio Code'},
+  {'S', 'Zed'},
   {'D', 'Xcode'},
   {'F', 'Simulator'},
-  {'G', 'Sublime Merge'},
   {'H', 'Slack'},
   {'J', 'Messages'},
   -- K is Cardhop (defined in app)
   {'L', 'Music'},
+
   -- bottom row
-  {'Z', 'Google Chrome'},
+  {'X', 'Claude'},
   -- C is Copy 'Em (defined in app)
   -- V is Fantastical (defined in app)
   {'M', 'Mail'},
-  -- Space is quick find Anybox
 }
 
 for i, app in ipairs(singleapps) do
